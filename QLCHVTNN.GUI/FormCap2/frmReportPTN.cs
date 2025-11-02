@@ -37,7 +37,7 @@ namespace QLCHVTNN.GUI.FormCap2
             rvwPTN.LocalReport.SetParameters(new ReportParameter("NgayThu", dsct.NgayThu.ToString()));
             rvwPTN.LocalReport.SetParameters(new ReportParameter("TenKH", dsct.KHACHHANG.TenKH.ToString()));
             rvwPTN.LocalReport.SetParameters(new ReportParameter("DiaChi", dsct.KHACHHANG.DiaChi.ToString()));
-            rvwPTN.LocalReport.SetParameters(new ReportParameter("SoTien", dsct.SoTienThu.ToString()));
+            rvwPTN.LocalReport.SetParameters(new ReportParameter("SoTien", dsct.SoTienThu.ToString("N0")));
             this.rvwPTN.RefreshReport();
         }
     }

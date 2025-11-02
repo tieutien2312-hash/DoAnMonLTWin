@@ -56,11 +56,11 @@ namespace QLCHVTNN.GUI.FormCap2
             var source = new ReportDataSource("DataSetLSMua", data);
             rvwINLS.LocalReport.DataSources.Clear();
             rvwINLS.LocalReport.DataSources.Add(source);
-            rvwINLS.LocalReport.SetParameters(new ReportParameter("tongTien", tongTien.ToString()));
+            rvwINLS.LocalReport.SetParameters(new ReportParameter("tongTien", tongTien.ToString("N0")));
             rvwINLS.LocalReport.SetParameters(new ReportParameter("MaKH", MaKhach));
             rvwINLS.LocalReport.SetParameters(new ReportParameter("TenKH",kHACHHANGService.FindByID(MaKhach).TenKH ));
-            rvwINLS.LocalReport.SetParameters(new ReportParameter("NgayFrom", ngfrom.ToString()));
-            rvwINLS.LocalReport.SetParameters(new ReportParameter("NgayTo", ngto.ToString()));
+            rvwINLS.LocalReport.SetParameters(new ReportParameter("NgayFrom", ngfrom.ToString("dd/MM/yyyy")));
+            rvwINLS.LocalReport.SetParameters(new ReportParameter("NgayTo", ngto.ToString("dd/MM/yyyy")));
             this.rvwINLS.RefreshReport();
         }
     }

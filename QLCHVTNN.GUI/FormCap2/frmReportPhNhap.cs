@@ -52,7 +52,7 @@ namespace QLCHVTNN.GUI.FormCap2
             var source = new ReportDataSource("DataSetPhNhap", data);
             rvwHD.LocalReport.DataSources.Clear();
             rvwHD.LocalReport.DataSources.Add(source);
-            rvwHD.LocalReport.SetParameters(new ReportParameter("tongTien", tongTien.ToString()));
+            rvwHD.LocalReport.SetParameters(new ReportParameter("tongTien", tongTien.ToString("N0")));
             this.rvwHD.RefreshReport();
         }
     }

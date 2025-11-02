@@ -47,8 +47,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.gr1 = new System.Windows.Forms.GroupBox();
-            this.chkTraLien = new System.Windows.Forms.CheckBox();
-            this.chkGhiNo = new System.Windows.Forms.CheckBox();
             this.cmbKhachHang = new System.Windows.Forms.ComboBox();
             this.dtpNgLap = new System.Windows.Forms.DateTimePicker();
             this.txtMaHD = new System.Windows.Forms.TextBox();
@@ -58,6 +56,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.chkGhiNo = new System.Windows.Forms.RadioButton();
+            this.chkTraLien = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHoaDon)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.gr1.SuspendLayout();
@@ -247,26 +247,6 @@
             this.gr1.TabStop = false;
             this.gr1.Text = "Thông tin phiếu";
             // 
-            // chkTraLien
-            // 
-            this.chkTraLien.AutoSize = true;
-            this.chkTraLien.Location = new System.Drawing.Point(323, 168);
-            this.chkTraLien.Name = "chkTraLien";
-            this.chkTraLien.Size = new System.Drawing.Size(74, 20);
-            this.chkTraLien.TabIndex = 20;
-            this.chkTraLien.Text = "Trả liền";
-            this.chkTraLien.UseVisualStyleBackColor = true;
-            // 
-            // chkGhiNo
-            // 
-            this.chkGhiNo.AutoSize = true;
-            this.chkGhiNo.Location = new System.Drawing.Point(184, 168);
-            this.chkGhiNo.Name = "chkGhiNo";
-            this.chkGhiNo.Size = new System.Drawing.Size(67, 20);
-            this.chkGhiNo.TabIndex = 20;
-            this.chkGhiNo.Text = "Ghi nợ";
-            this.chkGhiNo.UseVisualStyleBackColor = true;
-            // 
             // cmbKhachHang
             // 
             this.cmbKhachHang.FormattingEnabled = true;
@@ -274,6 +254,7 @@
             this.cmbKhachHang.Name = "cmbKhachHang";
             this.cmbKhachHang.Size = new System.Drawing.Size(230, 24);
             this.cmbKhachHang.TabIndex = 4;
+            this.cmbKhachHang.SelectedIndexChanged += new System.EventHandler(this.cmbKhachHang_SelectedIndexChanged);
             // 
             // dtpNgLap
             // 
@@ -350,6 +331,28 @@
             this.label1.TabIndex = 10;
             this.label1.Text = "TẠO HÓA ĐƠN";
             // 
+            // chkGhiNo
+            // 
+            this.chkGhiNo.AutoSize = true;
+            this.chkGhiNo.Location = new System.Drawing.Point(183, 167);
+            this.chkGhiNo.Name = "chkGhiNo";
+            this.chkGhiNo.Size = new System.Drawing.Size(69, 20);
+            this.chkGhiNo.TabIndex = 5;
+            this.chkGhiNo.TabStop = true;
+            this.chkGhiNo.Text = "Ghi Nợ";
+            this.chkGhiNo.UseVisualStyleBackColor = true;
+            // 
+            // chkTraLien
+            // 
+            this.chkTraLien.AutoSize = true;
+            this.chkTraLien.Location = new System.Drawing.Point(311, 166);
+            this.chkTraLien.Name = "chkTraLien";
+            this.chkTraLien.Size = new System.Drawing.Size(77, 20);
+            this.chkTraLien.TabIndex = 5;
+            this.chkTraLien.TabStop = true;
+            this.chkTraLien.Text = "Trả Liền";
+            this.chkTraLien.UseVisualStyleBackColor = true;
+            // 
             // frmHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -408,8 +411,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.CheckBox chkTraLien;
-        private System.Windows.Forms.CheckBox chkGhiNo;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.RadioButton chkTraLien;
+        private System.Windows.Forms.RadioButton chkGhiNo;
     }
 }

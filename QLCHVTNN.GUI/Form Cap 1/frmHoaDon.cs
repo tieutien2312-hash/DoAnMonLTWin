@@ -9,6 +9,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -68,7 +69,7 @@ namespace QLCHVTNN.GUI
         {
             string maHD = txtMaHD.Text.Trim();
             var ngNh = dtpNgLap.Value;
-            string khach = cmbKhachHang.SelectedValue.ToString();
+            string khach = cmbKhachHang.SelectedValue.ToString();            
             string ltt;
             if (chkGhiNo.Checked)
                 ltt = "Ghi nợ";
@@ -173,6 +174,14 @@ namespace QLCHVTNN.GUI
         {
             frmReportHD frm = new frmReportHD(txtMaHD.Text);
             frm.Show();
+        }
+
+        private void cmbKhachHang_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string khach = cmbKhachHang.SelectedValue.ToString(); 
+            if (khach=="VL001")
+                this.chkGhiNo.Enabled = false;
+            else this.chkGhiNo.Enabled = true;
         }
     }
 }

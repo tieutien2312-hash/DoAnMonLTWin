@@ -50,7 +50,7 @@ namespace QLCHVTNN.GUI.Form_Cap_2
             var source = new ReportDataSource("DataSetHD", data);
             rvwHD.LocalReport.DataSources.Clear();
             rvwHD.LocalReport.DataSources.Add(source);
-            rvwHD.LocalReport.SetParameters(new ReportParameter("tongTien", tongTien.ToString()));
+            rvwHD.LocalReport.SetParameters(new ReportParameter("tongTien", tongTien.ToString("N0")));
             this.rvwHD.RefreshReport();
         }
     }

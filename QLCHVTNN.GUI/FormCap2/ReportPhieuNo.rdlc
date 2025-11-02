@@ -290,7 +290,6 @@
     </ReportParameter>
     <ReportParameter Name="NgayThu">
       <DataType>String</DataType>
-      <Nullable>true</Nullable>
       <AllowBlank>true</AllowBlank>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
